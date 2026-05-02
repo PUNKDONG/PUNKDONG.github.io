@@ -3,39 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PUNKDONG</title>
-  <meta name="description" content="PUNKDONG 的项目主页，当前主站点为洛克王国查蛋助手。">
+  <meta name="fa4d72c79bd36e2e18c551ad2e78fe6300042804" content="fa4d72c79bd36e2e18c551ad2e78fe6300042804" />
+  <title>洛克王国查蛋助手</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7753335214392611" crossorigin="anonymous"></script>
+  <script src="./config.js"></script>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <aside class="slot-side left">展示位招租</aside>
+  <aside class="slot-side right">展示位招租</aside>
+
   <main class="wrap">
     <section class="hero">
-      <p class="eyebrow">PUNKDONG</p>
-      <h1>项目主页</h1>
-      <p class="intro">
-        当前主项目为洛克王国查蛋助手。社媒与外部流量入口保持不变，仍然使用
-        <a href="/rocegg/">/rocegg/</a>。
-      </p>
-      <p class="actions">
-        <a class="button primary" href="/rocegg/">进入洛克王国查蛋助手</a>
-        <a class="button secondary" href="https://github.com/PUNKDONG/rocegg" target="_blank" rel="noreferrer">查看项目仓库</a>
-      </p>
+      <h1>洛克王国查蛋助手</h1>
+      <p>输入炫彩蛋的身高和体重数值，页面会直接在浏览器里匹配图鉴区间。</p>
     </section>
 
     <section class="panel">
-      <h2>说明</h2>
-      <p>这里是根站，用于承接域名根路径、站点说明以及广告与合规相关文件。</p>
-      <p>实际工具页仍然保留在 <a href="/rocegg/">/rocegg/</a>，不做社媒跳转替换。</p>
+      <form id="lookup-form" class="lookup-form">
+        <label>
+          <span>身高</span>
+          <input id="height" name="height" placeholder="请输入身高数值，例如 0.35" required>
+        </label>
+        <label>
+          <span>体重</span>
+          <input id="weight" name="weight" placeholder="请输入体重数值，例如 8" required>
+        </label>
+        <button type="submit">查询</button>
+      </form>
+
+      <section id="result" class="result hidden">
+        <p id="result-meta" class="meta"></p>
+        <p id="result-error" class="error hidden"></p>
+        <ul id="result-list"></ul>
+      </section>
     </section>
 
-    <section class="panel">
-      <h2>页面链接</h2>
-      <ul class="links">
-        <li><a href="/rocegg/">洛克王国查蛋助手</a></li>
-        <li><a href="./privacy.html">隐私政策</a></li>
-        <li><a href="https://github.com/PUNKDONG/rocegg" target="_blank" rel="noreferrer">GitHub 仓库</a></li>
-      </ul>
-    </section>
+    <footer class="footer">
+      <section class="submit-box">
+        <button id="toggle-submit" class="slot-trigger" type="button">提交新数据</button>
+
+        <form id="submit-form" class="submit-form hidden">
+          <label>
+            <span>身高</span>
+            <input id="submit-height" name="height" placeholder="请输入身高数值" required>
+          </label>
+          <label>
+            <span>体重</span>
+            <input id="submit-weight" name="weight" placeholder="请输入体重数值" required>
+          </label>
+          <label class="full-width">
+            <span>名称</span>
+            <input id="submit-name" name="name" placeholder="请输入宠物名称" required>
+          </label>
+          <label class="full-width">
+            <span id="captcha-label">验证码</span>
+            <input id="submit-captcha" name="captcha" placeholder="请输入计算结果" required>
+          </label>
+          <button type="submit">上传</button>
+        </form>
+
+        <p id="submit-message" class="submit-message hidden"></p>
+      </section>
+
+      <div class="slot-bottom">展示位招租</div>
+      <p class="repo-link">
+        项目主页：
+        <a href="https://github.com/PUNKDONG/rocegg" target="_blank" rel="noreferrer">https://github.com/PUNKDONG/rocegg</a>
+      </p>
+    </footer>
   </main>
+
+  <script src="./app.js"></script>
 </body>
 </html>
